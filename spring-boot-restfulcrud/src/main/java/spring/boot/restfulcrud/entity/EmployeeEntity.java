@@ -10,6 +10,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name="EMPLOYEE")
 public class EmployeeEntity {
@@ -27,6 +29,7 @@ public class EmployeeEntity {
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name="Date_Of_Birth", nullable = false)
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date dateOfBirth;
 
 	public Long getId() {
