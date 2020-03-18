@@ -18,12 +18,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return empDAO.findAll();
 	}
 
-
-	public EmployeeEntity getEmployeeById(Long id) {
-		System.out.println("+++++" + id);
-		return empDAO.findById(id).get();
-	}
-
 	public EmployeeEntity saveEmployee(EmployeeEntity emp) {
 		return empDAO.save(emp);
 	}
@@ -34,10 +28,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 		empFromDb.setPosition(empUpdate.getPosition());
 		empFromDb.setDateOfBirth(empUpdate.getDateOfBirth());
 		return empDAO.save(empFromDb);
-	}
-
-	public void deleteEmployeeById(Long id) {
-		empDAO.deleteById(id);
 	}
 
 }
