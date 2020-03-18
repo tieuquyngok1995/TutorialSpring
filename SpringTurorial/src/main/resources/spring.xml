@@ -1,0 +1,22 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean id="shape"
+		class="org.springtutorial.springxmlconfiguration.Shape">
+	</bean>
+
+	<!-- Như các bạn thấy trong code của Drawing, chúng ta có thể đưa đối tượng 
+		Circle vào đối tượng Drawing bằng hai cách: -->
+	<!-- bằng constructor hoặc bằng phương thức setShape(). Vậy trong Spring 
+		mình sẽ làm điều này như thế nào? -->
+
+	<!-- Đầu tiên, các bạn sẽ khai báo đối tượng Drawing mà chưa đưa các phụ 
+		thuộc của nó vào, -->
+	<!-- các bạn có thể khai báo nó giống như khởi tạo đối tượng Circle: -->
+
+	<bean id="drawing"
+		class="org.springtutorial.springxmlconfiguration.Drawing">
+	</bean>
+</beans>
